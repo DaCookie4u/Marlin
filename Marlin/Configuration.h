@@ -38,7 +38,7 @@
 #define CONFIGURATION_H_VERSION 020008
 
 // Uncomment next line and use EasyConfig.h file for an easy configuration of Anet ET series models
-//#define ET_EASY_CONFIG
+#define ET_EASY_CONFIG
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -1787,7 +1787,7 @@
  *
  * :{ 'en':'English', 'an':'Aragonese', 'bg':'Bulgarian', 'ca':'Catalan', 'cz':'Czech', 'da':'Danish', 'de':'German', 'el':'Greek', 'el_gr':'Greek (Greece)', 'es':'Spanish', 'eu':'Basque-Euskera', 'fi':'Finnish', 'fr':'French', 'gl':'Galician', 'hr':'Croatian', 'hu':'Hungarian', 'it':'Italian', 'jp_kana':'Japanese', 'ko_KR':'Korean (South Korea)', 'nl':'Dutch', 'pl':'Polish', 'pt':'Portuguese', 'pt_br':'Portuguese (Brazilian)', 'ro':'Romanian', 'ru':'Russian', 'sk':'Slovak', 'tr':'Turkish', 'uk':'Ukrainian', 'vi':'Vietnamese', 'zh_CN':'Chinese (Simplified)', 'zh_TW':'Chinese (Traditional)', 'test':'TEST' }
  */
-#define LCD_LANGUAGE es
+#define LCD_LANGUAGE en
 
 /**
  * LCD Character Set
@@ -2429,10 +2429,10 @@
 
   #define TOUCH_SCREEN_CALIBRATION
 
-  //#define TOUCH_CALIBRATION_X 12316
-  //#define TOUCH_CALIBRATION_Y -8981
-  //#define TOUCH_OFFSET_X        -43
-  //#define TOUCH_OFFSET_Y        257
+  #define TOUCH_CALIBRATION_X -11982
+  #define TOUCH_CALIBRATION_Y  10183
+  #define TOUCH_OFFSET_X         341
+  #define TOUCH_OFFSET_Y         -24
   //#define TOUCH_ORIENTATION TOUCH_LANDSCAPE
 
   #if ENABLED(TFT_COLOR_UI)
