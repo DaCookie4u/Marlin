@@ -1,4 +1,5 @@
 # Marlin for ET4/5 series 3D printers
+![counter](https://enoreg85bg22wzz.m.pipedream.net)
 
 This project is an effort to try to adapt the Anet ET4/ET5 motherboard and display for use with Marlin.
 Anyone can contribute to completing this project. Feedback is also welcome.
@@ -27,11 +28,14 @@ In summary, after some time dealing with Anet, my personal experience has been r
   - EEPROM (Flash emulation)
   - Powerloss (Thanks to Zhiniukas & SidDrP)
   - [Bltouch](https://github.com/davidtgbe/Marlin/blob/bugfix-2.0.x/docs/Tutorials/bltouch-en.md)
-  
+  - PC/SD firmware load/update
+    - I've managed to get working OpenBLT, (PC-USB / SD / DFU) updates. ~~I'm still looking for a way to do a first time flash without flasher~~. A hardware flasher is very recommended for its price.
+  - Onboard EEPROM I2C (4Kb/512B)
+    - Adapted and working, but not usable. Onboard EEPROM IC is too small to store marlin config, so, expect EEPROM errors if used. Use FLASH_EEPROM_EMULATION instead or solder another 24CXX EEPROM IC (24C32 or above recommended).
+  - Onboard FLASH (128Mb/16MB) 
+    - Ready. Tested LVGL from MKS (ET5 TFT). Not used, as not dedicated or universal LVGL UI has been designed AFAIK.
 ### On progress:
-  - PC/SD firmware load/update: I've managed to get working OpenBLT, (PC-USB / SD / DFU) updates. ~~I'm still looking for a way to do a first time flash without flasher~~. Even so, a hardware flasher is very recommended for its price.
-  - Take advantage of onboard EEPROM I2C instead of emulated flash and Serial FLASH chip.
-  
+  - No work in progress
 ### Known bugs:
 
 I have enabled issues tab. Please, try to be detailed regarding use cases and other useful information like hardware and software context. 
@@ -185,7 +189,7 @@ BED_CONTROL => PE2
   
 LV_DET => PC3  
 MAT_DET1 => PA2  
-POWER_LOSS_DET => PA8 (PANET)
+POWER_LOSS_DET => PA8 (PANET)  
 POWER_LOSS_SUPERCAP_SWITCH => PA3 (Zhiniukas & SidDrP)
   
 SDIO_D2 => PC10  

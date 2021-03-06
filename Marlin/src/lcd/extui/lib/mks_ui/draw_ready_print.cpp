@@ -110,7 +110,7 @@ void mks_disp_test() {
   #endif
 }
 
-void lv_draw_ready_print(void) {
+void lv_draw_ready_print() {
   char buf[30] = {0};
   lv_obj_t *buttonTool;
 
@@ -152,9 +152,9 @@ void lv_draw_ready_print(void) {
       limit_info = lv_label_create_empty(scr);
 
       lv_style_copy(&limit_style, &lv_style_scr);
-      limit_style.body.main_color.full = 0X0000;
-      limit_style.body.grad_color.full = 0X0000;
-      limit_style.text.color.full      = 0Xffff;
+      limit_style.body.main_color.full = 0x0000;
+      limit_style.body.grad_color.full = 0x0000;
+      limit_style.text.color.full      = 0xffff;
       lv_obj_set_style(limit_info, &limit_style);
 
       lv_obj_set_pos(limit_info, 20, 120);
@@ -163,9 +163,9 @@ void lv_draw_ready_print(void) {
       det_info = lv_label_create_empty(scr);
 
       lv_style_copy(&det_style, &lv_style_scr);
-      det_style.body.main_color.full = 0X0000;
-      det_style.body.grad_color.full = 0X0000;
-      det_style.text.color.full      = 0Xffff;
+      det_style.body.main_color.full = 0x0000;
+      det_style.body.grad_color.full = 0x0000;
+      det_style.text.color.full      = 0xffff;
       lv_obj_set_style(det_info, &det_style);
 
       lv_obj_set_pos(det_info, 20, 145);
